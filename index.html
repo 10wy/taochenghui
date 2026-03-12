@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的个人网站</title>
+  <title>陶橙蕙 · AI 产品经理</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -11,93 +11,86 @@
 </head>
 <body>
 
-  <!-- 导航栏 -->
+  <!-- 导航 -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">Portfolio<span class="dot">.</span></a>
+      <a href="#" class="nav-logo">陶橙蕙<span class="dot">.</span></a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">关于我</a></li>
+        <li><a href="#experience">经历</a></li>
         <li><a href="#skills">技能</a></li>
-        <li><a href="#projects">项目</a></li>
+        <li><a href="#gallery">相册</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
-      <a href="#contact" class="btn-primary nav-cta">立即联系</a>
+      <a href="#contact" class="btn-primary nav-cta">联系我</a>
       <button class="hamburger" id="hamburger" aria-label="菜单">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero 区域 -->
+  <!-- Hero -->
   <section class="hero" id="home">
     <div class="hero-bg-blur blur-1"></div>
     <div class="hero-bg-blur blur-2"></div>
-    <div class="hero-bg-blur blur-3"></div>
+    <div class="hero-photo-bg"></div>
+    <div class="hero-overlay"></div>
+
     <div class="hero-container">
       <div class="hero-content">
         <div class="hero-badge">
           <span class="badge-dot"></span>
-          现在开放合作
+          现开放求职 · AI 产品经理
         </div>
         <h1 class="hero-title">
-          创造<span class="highlight">数字体验</span><br />
-          连接无限可能。
+          Hi，我是<br /><span class="highlight">陶橙蕙</span>
         </h1>
+        <p class="hero-subtitle">AI Product Manager</p>
         <p class="hero-desc">
-          你好，我是一名全栈开发者与UI设计师。<br />
-          专注于构建高质量的产品和优雅的用户体验。
+          双大厂 AI 产品核心经历 · 百度 × 阿里 × 喜马拉雅<br />
+          深耕 Agent 智能体、VLM 多模态、RAG 知识库方向<br />
+          香港教育大学心理学硕士在读
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn-primary">查看作品 →</a>
-          <a href="#about" class="btn-ghost">了解更多</a>
+          <a href="#experience" class="btn-primary">查看经历 →</a>
+          <a href="mailto:taochenghui2025@163.com" class="btn-ghost">发送邮件</a>
         </div>
       </div>
-      <div class="hero-visual">
-        <div class="avatar-card">
-          <div class="avatar-ring"></div>
-          <div class="avatar-inner">
-            <div class="avatar-img">
-              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="60" cy="42" r="26" fill="#C5F145" opacity="0.15"/>
-                <circle cx="60" cy="42" r="20" fill="#C5F145" opacity="0.3"/>
-                <circle cx="60" cy="42" r="14" fill="#C5F145"/>
-                <path d="M20 100 C20 78 38 65 60 65 C82 65 100 78 100 100" fill="#C5F145" opacity="0.2"/>
-                <path d="M28 108 C28 83 42 70 60 70 C78 70 92 83 92 108" fill="#C5F145" opacity="0.4"/>
-              </svg>
-            </div>
-          </div>
-          <div class="floating-badge badge-top">
-            <span>🎨</span> UI/UX Design
-          </div>
-          <div class="floating-badge badge-bottom">
-            <span>💻</span> Full Stack Dev
-          </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-card">
+          <img src="images/photo2.png" alt="陶橙蕙" class="hero-avatar" />
         </div>
-        <div class="orbit orbit-1"></div>
-        <div class="orbit orbit-2"></div>
+        <div class="hero-photo-deco deco-1">
+          <span>🤖</span> Agent 智能体
+        </div>
+        <div class="hero-photo-deco deco-2">
+          <span>🧠</span> VLM 多模态
+        </div>
       </div>
     </div>
 
-    <!-- 统计数据 -->
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num" data-target="50">0</div>
-        <div class="stat-label">完成项目</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-num" data-target="5">0</div>
-        <div class="stat-label">年从业经验</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-num" data-target="30">0</div>
-        <div class="stat-label">服务客户</div>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat-item">
-        <div class="stat-num" data-target="10">0</div>
-        <div class="stat-label">获得奖项</div>
+    <!-- 统计 -->
+    <div class="hero-stats-wrap">
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num" data-target="3">0</div>
+          <div class="stat-label">大厂实习经历</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="93" data-suffix=".2%">0</div>
+          <div class="stat-label">VLM 综合准确率</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="500" data-prefix="GMV ">0</div>
+          <div class="stat-label">万元电商导流</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num" data-target="28" data-suffix=".75%">0</div>
+          <div class="stat-label">审核人效提升</div>
+        </div>
       </div>
     </div>
   </section>
@@ -106,296 +99,388 @@
   <section class="about section" id="about">
     <div class="container">
       <div class="about-grid">
-        <div class="about-visual">
-          <div class="about-card main-card">
-            <div class="card-glow"></div>
-            <div class="code-window">
-              <div class="code-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="code-title">about_me.js</span>
-              </div>
-              <pre class="code-body"><code><span class="kw">const</span> <span class="var">developer</span> = {
-  <span class="key">name</span>: <span class="str">"你的名字"</span>,
-  <span class="key">role</span>: <span class="str">"全栈开发者"</span>,
-  <span class="key">location</span>: <span class="str">"中国"</span>,
-  <span class="key">passion</span>: [
-    <span class="str">"代码艺术"</span>,
-    <span class="str">"用户体验"</span>,
-    <span class="str">"开源贡献"</span>
-  ],
-  <span class="key">available</span>: <span class="bool">true</span>
-};</code></pre>
-            </div>
+        <div class="about-img-col">
+          <div class="about-img-stack">
+            <img src="images/photo4.png" alt="陶橙蕙" class="about-img-main" />
+            <img src="images/photo7.png" alt="陶橙蕙" class="about-img-sub" />
           </div>
-          <div class="about-card mini-card card-exp">
-            <div class="mini-icon">🚀</div>
+          <div class="about-edu-card">
+            <div class="edu-icon">🎓</div>
             <div>
-              <div class="mini-num">5+</div>
-              <div class="mini-label">年经验</div>
-            </div>
-          </div>
-          <div class="about-card mini-card card-coffee">
-            <div class="mini-icon">☕</div>
-            <div>
-              <div class="mini-num">∞</div>
-              <div class="mini-label">咖啡杯</div>
+              <div class="edu-school">香港教育大学</div>
+              <div class="edu-major">心理学硕士（在读）</div>
             </div>
           </div>
         </div>
         <div class="about-content">
           <div class="section-tag">关于我</div>
-          <h2 class="section-title">热爱技术，<br /><span class="highlight">打造卓越产品</span></h2>
-          <p class="section-desc">
-            我是一名充满热情的全栈开发者，专注于将创意转化为优雅的数字产品。
-            拥有 5 年以上的开发经验，擅长 React、Node.js 和云架构。
+          <h2 class="section-title">AI 产品从<br /><span class="highlight">0 到 1 的落地者</span></h2>
+          <p class="about-desc">
+            拥有<strong>双大厂 AI 产品核心实习经历</strong>，深耕 Agent 智能体、VLM 多模态、RAG 知识库等方向，
+            完整主导从需求拆解到上线迭代的全链路落地，核心项目 <strong>100% 按期交付</strong>且方案纳入业务年度规划。
           </p>
-          <p class="section-desc">
-            我相信好的代码不仅仅是能运行的代码，更是优雅、可维护、能带来价值的代码。
-            每一个项目都是一次学习和成长的机会。
+          <p class="about-desc">
+            精通 Prompt 工程、标注体系搭建、模型调优，能通过 CoT 思维链设计、Badcase 分析解决模型幻觉、
+            识别准确率低等行业痛点，多项核心指标实现 <strong>20%+ 提升</strong>。
+          </p>
+          <p class="about-desc">
+            拥有心理学 + 新媒体产品复合背景，可结合用户体验心理学精准挖掘核心需求，
+            形成差异化产品设计思路。
           </p>
           <div class="about-tags">
-            <span class="tag">React</span>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Node.js</span>
-            <span class="tag">Python</span>
-            <span class="tag">UI/UX</span>
-            <span class="tag">云服务</span>
+            <span class="tag">Agent 智能体</span>
+            <span class="tag">VLM 多模态</span>
+            <span class="tag">RAG 知识库</span>
+            <span class="tag">Prompt 工程</span>
+            <span class="tag">数据分析</span>
+            <span class="tag">用户体验心理学</span>
+            <span class="tag">PRD 撰写</span>
+            <span class="tag">跨团队协作</span>
           </div>
-          <a href="#contact" class="btn-primary">与我合作</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 技能 -->
+  <!-- 教育经历 -->
+  <section class="education section" id="education">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">教育背景</div>
+        <h2 class="section-title">学习经历</h2>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-period">09/2025 — 07/2026</div>
+            <h3>香港教育大学</h3>
+            <div class="edu-degree">心理学硕士（企业与学校）· 在读</div>
+            <p>主修用户体验心理学、心理测量与数据分析、消费心理学，结合课程开展 AI 产品用户体验研究，通过心理测量方法挖掘 AI 工具使用中的用户痛点，形成分析报告。</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-card">
+            <div class="edu-period">09/2020 — 06/2024</div>
+            <h3>上海建桥学院</h3>
+            <div class="edu-degree">新闻学（全媒体采编与制作）· GPA 3.52/4</div>
+            <p>主修新媒体数据分析与应用、新媒体产品设计与项目管理、智能媒体营销，夯实产品设计与数据分析基础。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工作经历 -->
+  <section class="experience section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">工作经历</div>
+        <h2 class="section-title">双大厂 AI 产品<br /><span class="highlight">核心项目经历</span></h2>
+        <p class="section-subtitle">从需求拆解到上线迭代，全链路主导 AI 产品落地</p>
+      </div>
+
+      <!-- 百度 -->
+      <div class="exp-card" data-company="baidu">
+        <div class="exp-header">
+          <div class="exp-logo baidu-logo">百度</div>
+          <div class="exp-info">
+            <h3>百度 MediaGo 国际化业务部</h3>
+            <div class="exp-title">AI 广告产品经理（实习）</div>
+            <div class="exp-period">09/2025 — 02/2026</div>
+          </div>
+          <div class="exp-badge">百度</div>
+        </div>
+        <div class="exp-project">
+          <div class="exp-project-name">📌 内容风控 Agent 策略优化</div>
+          <p class="exp-bg">针对海外多语种素材审核耗时长（8min/单）、标准不一的痛点，协助搭建基于 Agent 的辅助审核工具，通过 AI 预判替代重复性人工操作，提升审核人效。</p>
+          <div class="exp-duties">
+            <div class="exp-duty">
+              <span class="duty-num">01</span>
+              <div><strong>Agent 流程设计：</strong>深度拆解人工审核标准，输出 Agent 决策逻辑（PRD）；设计基于 CoT 思维链的成形提示词，将模糊的"违规"判断转化为"结构化逐层识别 + 合规规则匹配"的标准推理步骤。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">02</span>
+              <div><strong>知识库与策略调优：</strong>针对模型幻觉问题，整理 5000+ 历史 Badcase 构建 RAG 搜索数据集；设计人机协作交互界面，确保审核员能够快速对 AI 结果进行纠偏。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">03</span>
+              <div><strong>效果验证与迭代：</strong>完成多模态智能审核工具 MVP 版本上线；通过两轮系统提示词调优，解决了小语种识别率低的问题，确保核心功能按时交付。</div>
+            </div>
+          </div>
+          <div class="exp-metrics">
+            <div class="metric-item">
+              <div class="metric-val">72% → 89%</div>
+              <div class="metric-label">预标注准确率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">↓28.75%</div>
+              <div class="metric-label">审核时长缩短</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">65% → 82%</div>
+              <div class="metric-label">小语种识别率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">80%</div>
+              <div class="metric-label">核心场景覆盖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 阿里 -->
+      <div class="exp-card" data-company="ali">
+        <div class="exp-header">
+          <div class="exp-logo ali-logo">阿里</div>
+          <div class="exp-info">
+            <h3>阿里巴巴夸克智能信息部</h3>
+            <div class="exp-title">AI 产品经理</div>
+            <div class="exp-period">09/2024 — 07/2025</div>
+          </div>
+          <div class="exp-badge">阿里巴巴</div>
+        </div>
+        <div class="exp-project">
+          <div class="exp-project-name">📌 夸克扫描王 AI 赋能</div>
+          <p class="exp-bg">解决扫描王场景单一、复杂环境识别率低的痛点，升级 VLM 能力拓展万物识别场景，搭建「扫描-识别-购买」商业闭环。</p>
+          <div class="exp-duties">
+            <div class="exp-duty">
+              <span class="duty-num">01</span>
+              <div><strong>产品方案设计：</strong>分析千万级用户行为数据，结合 1000+ 用户调研反馈，定位三大核心痛点；输出 12 类万物识别功能优化方案与完整 PRD，完成产品原型设计。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">02</span>
+              <div><strong>模型优化与落地：</strong>通过 Badcase 分析明确数据集建设方向，搭建标准化标注体系与结构化 Prompt 工程，推动多模态模型与扫描王产品功能深度融合。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">03</span>
+              <div><strong>全周期项目管理：</strong>统筹算法、开发、设计、运营等多团队，把控项目全流程节点，产品上线后建立核心指标周监控机制，基于数据与用户反馈持续优化产品策略。</div>
+            </div>
+          </div>
+          <div class="exp-metrics">
+            <div class="metric-item">
+              <div class="metric-val">47% → 70%</div>
+              <div class="metric-label">物体识别准确率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">93.2%</div>
+              <div class="metric-label">VLM 综合准确率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">500万+</div>
+              <div class="metric-label">淘宝导流 GMV</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">12类</div>
+              <div class="metric-label">万物识别场景</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 喜马拉雅 -->
+      <div class="exp-card" data-company="xima">
+        <div class="exp-header">
+          <div class="exp-logo xima-logo">喜马</div>
+          <div class="exp-info">
+            <h3>上海喜马拉雅有限公司</h3>
+            <div class="exp-title">产品实习生（语音交互与智能服务方向）</div>
+            <div class="exp-period">08/2023 — 08/2024</div>
+          </div>
+          <div class="exp-badge">喜马拉雅</div>
+        </div>
+        <div class="exp-project">
+          <div class="exp-project-name">📌 小雅智能助手对话能力优化</div>
+          <p class="exp-bg">小雅 AI 助手复杂需求意图识别准确率仅 68%，30% 用户触发需求后因回答不符流失，需通过 Agent 逻辑优化、RAG 知识库升级、意图识别策略迭代，提升对话准确率与用户留存。</p>
+          <div class="exp-duties">
+            <div class="exp-duty">
+              <span class="duty-num">01</span>
+              <div><strong>数据标注与 RAG 优化：</strong>完成 1000+ 未准确响应的语音请求意图标注，梳理 300+ 权威问答 Case 补充 RAG 知识库，优化语音提问检索匹配逻辑。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">02</span>
+              <div><strong>竞品调研与方案输出：</strong>调研豆包语音助手、小度 AI、天猫精灵等头部竞品，输出包含话术模板库、意图识别策略的竞品分析报告。</div>
+            </div>
+            <div class="exp-duty">
+              <span class="duty-num">03</span>
+              <div><strong>效果验证与迭代跟踪：</strong>设计核心指标监控体系，追踪意图识别准确率、用户二次提问率、7日留存率三大核心指标，输出优化效果分析报告。</div>
+            </div>
+          </div>
+          <div class="exp-metrics">
+            <div class="metric-item">
+              <div class="metric-val">68% → 81%</div>
+              <div class="metric-label">意图识别准确率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">↓22%</div>
+              <div class="metric-label">用户二次提问率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">↑12%</div>
+              <div class="metric-label">7日留存率</div>
+            </div>
+            <div class="metric-item">
+              <div class="metric-val">6/10</div>
+              <div class="metric-label">优化建议被采纳</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 核心技能 -->
   <section class="skills section" id="skills">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">专业技能</div>
-        <h2 class="section-title">我擅长的<span class="highlight">技术栈</span></h2>
-        <p class="section-subtitle">持续学习，不断精进，以下是我的核心技能领域</p>
+        <div class="section-tag">核心能力</div>
+        <h2 class="section-title">AI 产品经理<span class="highlight">能力图谱</span></h2>
       </div>
       <div class="skills-grid">
         <div class="skill-card" data-delay="0">
-          <div class="skill-icon">⚛️</div>
-          <h3>前端开发</h3>
-          <p>React, Vue, TypeScript, Tailwind CSS, 动画与交互设计</p>
+          <div class="skill-icon">🤖</div>
+          <h3>AI 产品全链路落地</h3>
+          <p>从需求拆解到上线迭代，完整主导 AI 产品落地，100% 按期交付</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="95"></div></div>
+          <span class="skill-percent">95%</span>
+        </div>
+        <div class="skill-card" data-delay="100">
+          <div class="skill-icon">⚡</div>
+          <h3>Prompt 工程 & 模型调优</h3>
+          <p>CoT 思维链设计、Badcase 分析、标注体系搭建、模型幻觉解决</p>
           <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
           <span class="skill-percent">92%</span>
         </div>
-        <div class="skill-card" data-delay="100">
-          <div class="skill-icon">⚙️</div>
-          <h3>后端开发</h3>
-          <p>Node.js, Python, REST API, GraphQL, 微服务架构</p>
-          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
-          <span class="skill-percent">85%</span>
-        </div>
         <div class="skill-card" data-delay="200">
-          <div class="skill-icon">🗄️</div>
-          <h3>数据库</h3>
-          <p>PostgreSQL, MongoDB, Redis, 数据建模与优化</p>
-          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
-          <span class="skill-percent">80%</span>
-        </div>
-        <div class="skill-card" data-delay="300">
-          <div class="skill-icon">☁️</div>
-          <h3>云与DevOps</h3>
-          <p>AWS, Docker, CI/CD, Kubernetes, 自动化部署</p>
-          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
-          <span class="skill-percent">75%</span>
-        </div>
-        <div class="skill-card" data-delay="400">
-          <div class="skill-icon">🎨</div>
-          <h3>UI/UX 设计</h3>
-          <p>Figma, 用户研究, 原型设计, 设计系统构建</p>
+          <div class="skill-icon">📊</div>
+          <h3>数据分析 & 指标体系</h3>
+          <p>量化指标体系搭建，数据驱动产品优化，周级回训持续迭代</p>
           <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
           <span class="skill-percent">88%</span>
         </div>
+        <div class="skill-card" data-delay="300">
+          <div class="skill-icon">🧩</div>
+          <h3>Agent / RAG / VLM</h3>
+          <p>深耕 Agent 智能体、RAG 知识库、VLM 多模态核心 AI 技术方向</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="90"></div></div>
+          <span class="skill-percent">90%</span>
+        </div>
+        <div class="skill-card" data-delay="400">
+          <div class="skill-icon">🎯</div>
+          <h3>跨团队项目管理</h3>
+          <p>协调算法、开发、设计、运营等多团队，把控项目全生命周期节点</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
         <div class="skill-card" data-delay="500">
-          <div class="skill-icon">📱</div>
-          <h3>移动端开发</h3>
-          <p>React Native, Flutter, 跨平台应用开发与优化</p>
-          <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
-          <span class="skill-percent">70%</span>
+          <div class="skill-icon">🧠</div>
+          <h3>用户体验心理学</h3>
+          <p>心理学 + 新媒体复合背景，精准挖掘用户核心需求，差异化产品设计</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="82"></div></div>
+          <span class="skill-percent">82%</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 项目 -->
-  <section class="projects section" id="projects">
+  <!-- 相册 -->
+  <section class="gallery section" id="gallery">
     <div class="container">
       <div class="section-header">
-        <div class="section-tag">精选项目</div>
-        <h2 class="section-title">本周<span class="highlight">热门作品</span></h2>
-        <p class="section-subtitle">每一个项目都是对技术和创意的深度探索</p>
+        <div class="section-tag">生活记录</div>
+        <h2 class="section-title">用镜头记录<span class="highlight">每一个瞬间</span></h2>
       </div>
-      <div class="projects-grid">
-        <div class="project-card featured">
-          <div class="project-img img-1">
-            <div class="project-overlay">
-              <span class="project-type">Web App</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>电商平台全栈项目</h3>
-            <p>基于 React + Node.js 的全功能电商平台，支持支付、订单管理、用户系统</p>
-            <div class="project-tags">
-              <span>React</span><span>Node.js</span><span>MongoDB</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="link-btn">查看详情 →</a>
-              <a href="#" class="link-icon">GitHub</a>
-            </div>
-          </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gi-tall">
+          <img src="images/photo6.png" alt="夜晚海边" />
+          <div class="gallery-overlay"><span>夜晚·海边</span></div>
         </div>
-        <div class="project-card">
-          <div class="project-img img-2">
-            <div class="project-overlay">
-              <span class="project-type">Mobile App</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>健康追踪 App</h3>
-            <p>React Native 跨平台健康管理应用，集成 AI 健康建议</p>
-            <div class="project-tags">
-              <span>React Native</span><span>AI</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="link-btn">查看详情 →</a>
-            </div>
-          </div>
+        <div class="gallery-item">
+          <img src="images/photo1.png" alt="山顶俯瞰" />
+          <div class="gallery-overlay"><span>山顶·俯瞰</span></div>
         </div>
-        <div class="project-card">
-          <div class="project-img img-3">
-            <div class="project-overlay">
-              <span class="project-type">Dashboard</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>数据可视化平台</h3>
-            <p>企业级数据分析仪表板，实时图表与自定义报告系统</p>
-            <div class="project-tags">
-              <span>Vue.js</span><span>D3.js</span><span>Python</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="link-btn">查看详情 →</a>
-            </div>
-          </div>
+        <div class="gallery-item">
+          <img src="images/photo5.png" alt="音乐时光" />
+          <div class="gallery-overlay"><span>音乐·时光</span></div>
         </div>
-        <div class="project-card">
-          <div class="project-img img-4">
-            <div class="project-overlay">
-              <span class="project-type">SaaS</span>
-            </div>
-          </div>
-          <div class="project-info">
-            <h3>团队协作 SaaS</h3>
-            <p>实时协作工具，支持文档共享、任务管理与视频会议</p>
-            <div class="project-tags">
-              <span>TypeScript</span><span>WebSocket</span>
-            </div>
-            <div class="project-links">
-              <a href="#" class="link-btn">查看详情 →</a>
-            </div>
-          </div>
+        <div class="gallery-item gi-wide">
+          <img src="images/photo2.png" alt="海边日落" />
+          <div class="gallery-overlay"><span>海边·日落</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo3.png" alt="冬日购物" />
+          <div class="gallery-overlay"><span>冬日·购物</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/photo7.png" alt="草原羊驼" />
+          <div class="gallery-overlay"><span>草原·自然</span></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 合作品牌 -->
-  <section class="partners section">
-    <div class="container">
-      <p class="partners-label">曾服务/合作过的品牌</p>
-      <div class="partners-track">
-        <div class="partners-inner" id="partnersInner">
-          <div class="partner-item">Alibaba Cloud</div>
-          <div class="partner-item">Tencent</div>
-          <div class="partner-item">ByteDance</div>
-          <div class="partner-item">Meituan</div>
-          <div class="partner-item">JD.com</div>
-          <div class="partner-item">NetEase</div>
-          <div class="partner-item">Alibaba Cloud</div>
-          <div class="partner-item">Tencent</div>
-          <div class="partner-item">ByteDance</div>
-          <div class="partner-item">Meituan</div>
-          <div class="partner-item">JD.com</div>
-          <div class="partner-item">NetEase</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 联系 / 订阅 -->
+  <!-- 联系 -->
   <section class="contact section" id="contact">
     <div class="container">
       <div class="contact-box">
         <div class="contact-bg-blur"></div>
-        <div class="contact-content">
+        <div class="contact-left">
           <div class="section-tag">联系我</div>
           <h2 class="contact-title">
-            想一起打造<br /><span class="highlight">出色的产品</span>？
+            一起探索<br /><span class="highlight">AI 产品的边界</span>？
           </h2>
           <p class="contact-desc">
-            无论你有项目想法、合作提议，还是只想打个招呼，我都很乐意听到你的消息。
+            无论是工作机会、项目合作，还是 AI 产品方向的交流，我都很期待与你对话。
           </p>
+          <div class="contact-cards">
+            <div class="contact-info-card">
+              <div class="ci-icon">📧</div>
+              <div>
+                <div class="ci-label">邮箱</div>
+                <a href="mailto:taochenghui2025@163.com" class="ci-val">taochenghui2025@163.com</a>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="ci-icon">📱</div>
+              <div>
+                <div class="ci-label">手机（大陆）</div>
+                <div class="ci-val">+86 18559093896</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="ci-icon">🇭🇰</div>
+              <div>
+                <div class="ci-label">手机（香港）</div>
+                <div class="ci-val">+852 84963390</div>
+              </div>
+            </div>
+            <div class="contact-info-card">
+              <div class="ci-icon">📍</div>
+              <div>
+                <div class="ci-label">当前位置</div>
+                <div class="ci-val">香港 · 开放远程/两岸三地机会</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right">
           <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <input type="text" placeholder="你的姓名" required />
-              </div>
-              <div class="form-group">
-                <input type="email" placeholder="邮箱地址" required />
-              </div>
+            <div class="form-group">
+              <input type="text" placeholder="你的姓名" required />
             </div>
             <div class="form-group">
-              <input type="text" placeholder="项目主题" />
+              <input type="email" placeholder="邮箱地址" required />
             </div>
             <div class="form-group">
-              <textarea placeholder="告诉我你的想法..." rows="4" required></textarea>
+              <input type="text" placeholder="联系主题（如：合作邀约、内推机会...）" />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="告诉我更多..." rows="5" required></textarea>
             </div>
             <button type="submit" class="btn-primary btn-full">发送消息 ✉️</button>
           </form>
-        </div>
-        <div class="contact-info">
-          <div class="contact-card">
-            <div class="contact-icon">📧</div>
-            <div>
-              <div class="contact-label">邮箱</div>
-              <div class="contact-val">hello@example.com</div>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">📍</div>
-            <div>
-              <div class="contact-label">位置</div>
-              <div class="contact-val">中国 · 北京</div>
-            </div>
-          </div>
-          <div class="contact-card">
-            <div class="contact-icon">⏰</div>
-            <div>
-              <div class="contact-label">响应时间</div>
-              <div class="contact-val">24 小时内回复</div>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" class="social-btn" title="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-            </a>
-            <a href="#" class="social-btn" title="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" class="social-btn" title="Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </a>
-            <a href="#" class="social-btn" title="微信">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.295.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.601-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-3.518 3.076c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.86 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
-            </a>
-          </div>
         </div>
       </div>
     </div>
@@ -404,44 +489,26 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
+      <div class="footer-inner">
         <div class="footer-brand">
-          <a href="#" class="nav-logo">Portfolio<span class="dot">.</span></a>
-          <p>创造有价值的数字体验，<br />用代码和设计改变世界。</p>
-          <p class="footer-copy">© 2026 版权所有</p>
+          <a href="#" class="nav-logo">陶橙蕙<span class="dot">.</span></a>
+          <p>AI 产品经理 · 双大厂经历<br />香港教育大学心理学硕士在读</p>
         </div>
-        <div class="footer-col">
-          <h4>导航</h4>
-          <ul>
-            <li><a href="#about">关于我</a></li>
-            <li><a href="#skills">技能</a></li>
-            <li><a href="#projects">项目</a></li>
-            <li><a href="#contact">联系</a></li>
-          </ul>
+        <div class="footer-nav">
+          <a href="#about">关于我</a>
+          <a href="#experience">工作经历</a>
+          <a href="#skills">核心技能</a>
+          <a href="#gallery">相册</a>
+          <a href="#contact">联系</a>
         </div>
-        <div class="footer-col">
-          <h4>服务</h4>
-          <ul>
-            <li><a href="#">Web 开发</a></li>
-            <li><a href="#">移动端开发</a></li>
-            <li><a href="#">UI/UX 设计</a></li>
-            <li><a href="#">技术咨询</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>联系方式</h4>
-          <ul>
-            <li><a href="#">hello@example.com</a></li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">微信</a></li>
-          </ul>
+        <div class="footer-right">
+          <p class="footer-copy">© 2026 陶橙蕙 · All rights reserved</p>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- 回到顶部 -->
+  <!-- 回顶部 -->
   <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
 
   <script src="script.js"></script>

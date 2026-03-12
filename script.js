@@ -1,159 +1,113 @@
-// ===== 导航栏滚动效果 =====
+// ===== 导航滚动 =====
 const navbar = document.getElementById('navbar');
 const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  navbar.classList.toggle('scrolled', scrollY > 50);
-  backToTop.classList.toggle('visible', scrollY > 400);
+  const y = window.scrollY;
+  navbar.classList.toggle('scrolled', y > 50);
+  backToTop.classList.toggle('visible', y > 400);
 });
 
 // ===== 汉堡菜单 =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
+hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
-});
-
-navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
-});
-
-// ===== 回到顶部 =====
-backToTop.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+// ===== 回顶部 =====
+backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
 // ===== 数字滚动动画 =====
 function animateCounter(el) {
-  const target = parseInt(el.dataset.target);
-  const duration = 2000;
-  const step = target / (duration / 16);
+  const target = parseFloat(el.dataset.target);
+  const suffix = el.dataset.suffix || '+';
+  const prefix = el.dataset.prefix || '';
+  const duration = 1800;
+  const steps = 60;
+  const increment = target / steps;
   let current = 0;
-
   const timer = setInterval(() => {
-    current += step;
+    current += increment;
     if (current >= target) {
       current = target;
       clearInterval(timer);
     }
-    el.textContent = Math.floor(current);
-  }, 16);
+    const display = Number.isInteger(target) ? Math.floor(current) : current.toFixed(0);
+    el.textContent = prefix + display + suffix;
+  }, duration / steps);
 }
 
-// ===== 滚动进入动画（Intersection Observer）=====
-const observerOptions = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -50px 0px'
+// ===== IntersectionObserver =====
+const io = (els, cb, options = {}) => {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        cb(entry.target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px', ...options });
+  els.forEach(el => observer.observe(el));
 };
 
-// 技能卡片动画
-const skillCards = document.querySelectorAll('.skill-card');
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const card = entry.target;
-      const delay = parseInt(card.dataset.delay || 0);
-      setTimeout(() => {
-        card.classList.add('visible');
-        const bar = card.querySelector('.skill-progress');
-        if (bar) {
-          bar.style.width = bar.dataset.width + '%';
-        }
-      }, delay);
-      skillObserver.unobserve(card);
-    }
-  });
-}, observerOptions);
+// 统计数字
+io(document.querySelectorAll('.stat-num'), animateCounter, { threshold: 0.5 });
 
-skillCards.forEach(card => skillObserver.observe(card));
-
-// 统计数字动画
-const statNums = document.querySelectorAll('.stat-num');
-const statsObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      animateCounter(entry.target);
-      statsObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.5 });
-
-statNums.forEach(el => statsObserver.observe(el));
-
-// 通用淡入动画
-const fadeEls = document.querySelectorAll(
-  '.about-card, .project-card, .contact-card, .section-header, .about-content, .hero-stats'
-);
-const fadeObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-      fadeObserver.unobserve(entry.target);
-    }
-  });
-}, observerOptions);
-
-fadeEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(24px)';
-  el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-  fadeObserver.observe(el);
+// 技能卡片
+io(document.querySelectorAll('.skill-card'), (card) => {
+  const delay = parseInt(card.dataset.delay || 0);
+  setTimeout(() => {
+    card.classList.add('visible');
+    const bar = card.querySelector('.skill-progress');
+    if (bar) bar.style.width = bar.dataset.width + '%';
+  }, delay);
 });
+
+// 通用淡入
+document.querySelectorAll(
+  '.exp-card, .edu-card, .gallery-item, .contact-info-card, .about-img-stack, .about-content, .section-header'
+).forEach(el => {
+  el.classList.add('fade-in');
+});
+io(document.querySelectorAll('.fade-in'), el => el.classList.add('visible'));
 
 // ===== 联系表单 =====
-const contactForm = document.getElementById('contactForm');
 const toast = document.createElement('div');
 toast.className = 'toast';
-toast.textContent = '✅ 消息已发送，我会尽快回复你！';
+toast.textContent = '✅ 消息已发送，我会尽快回复！';
 document.body.appendChild(toast);
 
-contactForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const btn = contactForm.querySelector('button[type="submit"]');
-  btn.textContent = '发送中...';
-  btn.disabled = true;
+const form = document.getElementById('contactForm');
+if (form) {
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    btn.textContent = '发送中...';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.textContent = '发送消息 ✉️';
+      btn.disabled = false;
+      form.reset();
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 3500);
+    }, 1200);
+  });
+}
 
-  setTimeout(() => {
-    btn.textContent = '发送消息 ✉️';
-    btn.disabled = false;
-    contactForm.reset();
-    toast.classList.add('show');
-    setTimeout(() => toast.classList.remove('show'), 3500);
-  }, 1200);
-});
-
-// ===== 平滑滚动到锚点 =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    const target = document.querySelector(this.getAttribute('href'));
+// ===== 平滑锚点 =====
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', (e) => {
+    const target = document.querySelector(a.getAttribute('href'));
     if (target) {
       e.preventDefault();
-      const offset = 80;
-      const top = target.getBoundingClientRect().top + window.scrollY - offset;
-      window.scrollTo({ top, behavior: 'smooth' });
+      window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
     }
   });
 });
 
-// ===== 鼠标跟随高光效果（卡片） =====
-document.querySelectorAll('.skill-card, .project-card, .contact-card').forEach(card => {
-  card.addEventListener('mousemove', (e) => {
-    const rect = card.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    card.style.setProperty('--mouse-x', x + '%');
-    card.style.setProperty('--mouse-y', y + '%');
-  });
-});
-
-// ===== 页面加载动画 =====
-window.addEventListener('load', () => {
+// ===== 页面加载 =====
+document.addEventListener('DOMContentLoaded', () => {
   document.body.style.opacity = '0';
   document.body.style.transition = 'opacity 0.5s ease';
-  requestAnimationFrame(() => {
-    document.body.style.opacity = '1';
-  });
+  requestAnimationFrame(() => { document.body.style.opacity = '1'; });
 });
