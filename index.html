@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的个人网站</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- 导航栏 -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">Portfolio<span class="dot">.</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#skills">技能</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系</a></li>
+      </ul>
+      <a href="#contact" class="btn-primary nav-cta">立即联系</a>
+      <button class="hamburger" id="hamburger" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero 区域 -->
+  <section class="hero" id="home">
+    <div class="hero-bg-blur blur-1"></div>
+    <div class="hero-bg-blur blur-2"></div>
+    <div class="hero-bg-blur blur-3"></div>
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          现在开放合作
+        </div>
+        <h1 class="hero-title">
+          创造<span class="highlight">数字体验</span><br />
+          连接无限可能。
+        </h1>
+        <p class="hero-desc">
+          你好，我是一名全栈开发者与UI设计师。<br />
+          专注于构建高质量的产品和优雅的用户体验。
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">查看作品 →</a>
+          <a href="#about" class="btn-ghost">了解更多</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="avatar-card">
+          <div class="avatar-ring"></div>
+          <div class="avatar-inner">
+            <div class="avatar-img">
+              <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="60" cy="42" r="26" fill="#C5F145" opacity="0.15"/>
+                <circle cx="60" cy="42" r="20" fill="#C5F145" opacity="0.3"/>
+                <circle cx="60" cy="42" r="14" fill="#C5F145"/>
+                <path d="M20 100 C20 78 38 65 60 65 C82 65 100 78 100 100" fill="#C5F145" opacity="0.2"/>
+                <path d="M28 108 C28 83 42 70 60 70 C78 70 92 83 92 108" fill="#C5F145" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="floating-badge badge-top">
+            <span>🎨</span> UI/UX Design
+          </div>
+          <div class="floating-badge badge-bottom">
+            <span>💻</span> Full Stack Dev
+          </div>
+        </div>
+        <div class="orbit orbit-1"></div>
+        <div class="orbit orbit-2"></div>
+      </div>
+    </div>
+
+    <!-- 统计数据 -->
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num" data-target="50">0</div>
+        <div class="stat-label">完成项目</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="5">0</div>
+        <div class="stat-label">年从业经验</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="30">0</div>
+        <div class="stat-label">服务客户</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <div class="stat-num" data-target="10">0</div>
+        <div class="stat-label">获得奖项</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于我 -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-card main-card">
+            <div class="card-glow"></div>
+            <div class="code-window">
+              <div class="code-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="code-title">about_me.js</span>
+              </div>
+              <pre class="code-body"><code><span class="kw">const</span> <span class="var">developer</span> = {
+  <span class="key">name</span>: <span class="str">"你的名字"</span>,
+  <span class="key">role</span>: <span class="str">"全栈开发者"</span>,
+  <span class="key">location</span>: <span class="str">"中国"</span>,
+  <span class="key">passion</span>: [
+    <span class="str">"代码艺术"</span>,
+    <span class="str">"用户体验"</span>,
+    <span class="str">"开源贡献"</span>
+  ],
+  <span class="key">available</span>: <span class="bool">true</span>
+};</code></pre>
+            </div>
+          </div>
+          <div class="about-card mini-card card-exp">
+            <div class="mini-icon">🚀</div>
+            <div>
+              <div class="mini-num">5+</div>
+              <div class="mini-label">年经验</div>
+            </div>
+          </div>
+          <div class="about-card mini-card card-coffee">
+            <div class="mini-icon">☕</div>
+            <div>
+              <div class="mini-num">∞</div>
+              <div class="mini-label">咖啡杯</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-tag">关于我</div>
+          <h2 class="section-title">热爱技术，<br /><span class="highlight">打造卓越产品</span></h2>
+          <p class="section-desc">
+            我是一名充满热情的全栈开发者，专注于将创意转化为优雅的数字产品。
+            拥有 5 年以上的开发经验，擅长 React、Node.js 和云架构。
+          </p>
+          <p class="section-desc">
+            我相信好的代码不仅仅是能运行的代码，更是优雅、可维护、能带来价值的代码。
+            每一个项目都是一次学习和成长的机会。
+          </p>
+          <div class="about-tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">UI/UX</span>
+            <span class="tag">云服务</span>
+          </div>
+          <a href="#contact" class="btn-primary">与我合作</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">专业技能</div>
+        <h2 class="section-title">我擅长的<span class="highlight">技术栈</span></h2>
+        <p class="section-subtitle">持续学习，不断精进，以下是我的核心技能领域</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-delay="0">
+          <div class="skill-icon">⚛️</div>
+          <h3>前端开发</h3>
+          <p>React, Vue, TypeScript, Tailwind CSS, 动画与交互设计</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="92"></div></div>
+          <span class="skill-percent">92%</span>
+        </div>
+        <div class="skill-card" data-delay="100">
+          <div class="skill-icon">⚙️</div>
+          <h3>后端开发</h3>
+          <p>Node.js, Python, REST API, GraphQL, 微服务架构</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="85"></div></div>
+          <span class="skill-percent">85%</span>
+        </div>
+        <div class="skill-card" data-delay="200">
+          <div class="skill-icon">🗄️</div>
+          <h3>数据库</h3>
+          <p>PostgreSQL, MongoDB, Redis, 数据建模与优化</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="80"></div></div>
+          <span class="skill-percent">80%</span>
+        </div>
+        <div class="skill-card" data-delay="300">
+          <div class="skill-icon">☁️</div>
+          <h3>云与DevOps</h3>
+          <p>AWS, Docker, CI/CD, Kubernetes, 自动化部署</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="75"></div></div>
+          <span class="skill-percent">75%</span>
+        </div>
+        <div class="skill-card" data-delay="400">
+          <div class="skill-icon">🎨</div>
+          <h3>UI/UX 设计</h3>
+          <p>Figma, 用户研究, 原型设计, 设计系统构建</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="88"></div></div>
+          <span class="skill-percent">88%</span>
+        </div>
+        <div class="skill-card" data-delay="500">
+          <div class="skill-icon">📱</div>
+          <h3>移动端开发</h3>
+          <p>React Native, Flutter, 跨平台应用开发与优化</p>
+          <div class="skill-bar"><div class="skill-progress" data-width="70"></div></div>
+          <span class="skill-percent">70%</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 项目 -->
+  <section class="projects section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">精选项目</div>
+        <h2 class="section-title">本周<span class="highlight">热门作品</span></h2>
+        <p class="section-subtitle">每一个项目都是对技术和创意的深度探索</p>
+      </div>
+      <div class="projects-grid">
+        <div class="project-card featured">
+          <div class="project-img img-1">
+            <div class="project-overlay">
+              <span class="project-type">Web App</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>电商平台全栈项目</h3>
+            <p>基于 React + Node.js 的全功能电商平台，支持支付、订单管理、用户系统</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">查看详情 →</a>
+              <a href="#" class="link-icon">GitHub</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img img-2">
+            <div class="project-overlay">
+              <span class="project-type">Mobile App</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>健康追踪 App</h3>
+            <p>React Native 跨平台健康管理应用，集成 AI 健康建议</p>
+            <div class="project-tags">
+              <span>React Native</span><span>AI</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">查看详情 →</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img img-3">
+            <div class="project-overlay">
+              <span class="project-type">Dashboard</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>数据可视化平台</h3>
+            <p>企业级数据分析仪表板，实时图表与自定义报告系统</p>
+            <div class="project-tags">
+              <span>Vue.js</span><span>D3.js</span><span>Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">查看详情 →</a>
+            </div>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-img img-4">
+            <div class="project-overlay">
+              <span class="project-type">SaaS</span>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>团队协作 SaaS</h3>
+            <p>实时协作工具，支持文档共享、任务管理与视频会议</p>
+            <div class="project-tags">
+              <span>TypeScript</span><span>WebSocket</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="link-btn">查看详情 →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 合作品牌 -->
+  <section class="partners section">
+    <div class="container">
+      <p class="partners-label">曾服务/合作过的品牌</p>
+      <div class="partners-track">
+        <div class="partners-inner" id="partnersInner">
+          <div class="partner-item">Alibaba Cloud</div>
+          <div class="partner-item">Tencent</div>
+          <div class="partner-item">ByteDance</div>
+          <div class="partner-item">Meituan</div>
+          <div class="partner-item">JD.com</div>
+          <div class="partner-item">NetEase</div>
+          <div class="partner-item">Alibaba Cloud</div>
+          <div class="partner-item">Tencent</div>
+          <div class="partner-item">ByteDance</div>
+          <div class="partner-item">Meituan</div>
+          <div class="partner-item">JD.com</div>
+          <div class="partner-item">NetEase</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 联系 / 订阅 -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-box">
+        <div class="contact-bg-blur"></div>
+        <div class="contact-content">
+          <div class="section-tag">联系我</div>
+          <h2 class="contact-title">
+            想一起打造<br /><span class="highlight">出色的产品</span>？
+          </h2>
+          <p class="contact-desc">
+            无论你有项目想法、合作提议，还是只想打个招呼，我都很乐意听到你的消息。
+          </p>
+          <form class="contact-form" id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <input type="text" placeholder="你的姓名" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="邮箱地址" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="text" placeholder="项目主题" />
+            </div>
+            <div class="form-group">
+              <textarea placeholder="告诉我你的想法..." rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn-primary btn-full">发送消息 ✉️</button>
+          </form>
+        </div>
+        <div class="contact-info">
+          <div class="contact-card">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-label">邮箱</div>
+              <div class="contact-val">hello@example.com</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">位置</div>
+              <div class="contact-val">中国 · 北京</div>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <div class="contact-label">响应时间</div>
+              <div class="contact-val">24 小时内回复</div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Twitter">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="微信">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.691 2.188C3.891 2.188 0 5.476 0 9.53c0 2.212 1.17 4.203 3.002 5.55a.59.59 0 0 1 .213.665l-.39 1.48c-.019.07-.048.141-.048.213 0 .163.13.295.295.295a.326.326 0 0 0 .167-.054l1.903-1.114a.864.864 0 0 1 .717-.098 10.16 10.16 0 0 0 2.837.403c.276 0 .543-.027.811-.05-.857-2.578.157-4.972 1.932-6.446 1.703-1.415 3.882-1.98 5.853-1.838-.576-3.583-4.196-6.348-8.601-6.348zM5.785 5.991c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178A1.17 1.17 0 0 1 4.623 7.17c0-.651.52-1.18 1.162-1.18zm5.813 0c.642 0 1.162.529 1.162 1.18a1.17 1.17 0 0 1-1.162 1.178 1.17 1.17 0 0 1-1.162-1.178c0-.651.52-1.18 1.162-1.18zm5.34 2.867c-1.797-.052-3.746.512-5.28 1.786-1.72 1.428-2.687 3.72-1.78 6.22.942 2.453 3.666 4.229 6.884 4.229.826 0 1.622-.12 2.361-.336a.722.722 0 0 1 .598.082l1.584.926a.272.272 0 0 0 .14.047c.134 0 .24-.111.24-.247 0-.06-.023-.12-.038-.177l-.327-1.233a.582.582 0 0 1-.023-.156.49.49 0 0 1 .201-.398C23.024 18.48 24 16.82 24 14.98c0-3.21-2.931-5.837-7.062-6.122zm-3.518 3.076c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.97-.982zm4.86 0c.535 0 .969.44.969.982a.976.976 0 0 1-.969.983.976.976 0 0 1-.969-.983c0-.542.434-.982.969-.982z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">Portfolio<span class="dot">.</span></a>
+          <p>创造有价值的数字体验，<br />用代码和设计改变世界。</p>
+          <p class="footer-copy">© 2026 版权所有</p>
+        </div>
+        <div class="footer-col">
+          <h4>导航</h4>
+          <ul>
+            <li><a href="#about">关于我</a></li>
+            <li><a href="#skills">技能</a></li>
+            <li><a href="#projects">项目</a></li>
+            <li><a href="#contact">联系</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>服务</h4>
+          <ul>
+            <li><a href="#">Web 开发</a></li>
+            <li><a href="#">移动端开发</a></li>
+            <li><a href="#">UI/UX 设计</a></li>
+            <li><a href="#">技术咨询</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>联系方式</h4>
+          <ul>
+            <li><a href="#">hello@example.com</a></li>
+            <li><a href="#">GitHub</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">微信</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 回到顶部 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
