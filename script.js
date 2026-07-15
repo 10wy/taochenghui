@@ -7,7 +7,6 @@ window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', y > 50);
   backToTop.classList.toggle('visible', y > 400);
 });
-
 // ===== 汉堡菜单 =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
@@ -103,11 +102,4 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
     }
   });
-});
-
-// ===== 页面加载 =====
-document.addEventListener('DOMContentLoaded', () => {
-  document.body.style.opacity = '0';
-  document.body.style.transition = 'opacity 0.5s ease';
-  requestAnimationFrame(() => { document.body.style.opacity = '1'; });
 });
