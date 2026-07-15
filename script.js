@@ -64,7 +64,7 @@ io(document.querySelectorAll('.skill-card'), (card) => {
 
 // 通用淡入
 document.querySelectorAll(
-  '.exp-card, .edu-card, .gallery-item, .contact-info-card, .about-img-stack, .about-content, .section-header'
+  '.exp-card, .featured-project-card, .edu-card, .gallery-item, .contact-info-card, .about-img-stack, .about-content, .section-header'
 ).forEach(el => {
   el.classList.add('fade-in');
 });
