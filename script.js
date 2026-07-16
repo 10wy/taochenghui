@@ -16,26 +16,6 @@ navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => na
 // ===== 回顶部 =====
 backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-// ===== 数字滚动动画 =====
-function animateCounter(el) {
-  const target = parseFloat(el.dataset.target);
-  const suffix = el.dataset.suffix || '+';
-  const prefix = el.dataset.prefix || '';
-  const duration = 1800;
-  const steps = 60;
-  const increment = target / steps;
-  let current = 0;
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      current = target;
-      clearInterval(timer);
-    }
-    const display = Number.isInteger(target) ? Math.floor(current) : current.toFixed(0);
-    el.textContent = prefix + display + suffix;
-  }, duration / steps);
-}
-
 // ===== IntersectionObserver =====
 const io = (els, cb, options = {}) => {
   const observer = new IntersectionObserver((entries) => {
@@ -48,9 +28,6 @@ const io = (els, cb, options = {}) => {
   }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px', ...options });
   els.forEach(el => observer.observe(el));
 };
-
-// 统计数字
-io(document.querySelectorAll('.stat-num'), animateCounter, { threshold: 0.5 });
 
 // 技能卡片
 io(document.querySelectorAll('.skill-card'), (card) => {
