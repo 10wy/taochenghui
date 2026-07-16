@@ -17,10 +17,10 @@
     <div class="nav-container">
       <a href="#" class="nav-logo">陶橙蕙<span class="dot">.</span></a>
       <ul class="nav-links" id="navLinks">
+        <li><a href="#skills">能力</a></li>
         <li><a href="#about">关于我</a></li>
         <li><a href="#experience">经历</a></li>
         <li><a href="#portfolio">作品</a></li>
-        <li><a href="#skills">技能</a></li>
         <li><a href="#gallery">相册</a></li>
         <li><a href="#contact">联系</a></li>
       </ul>
@@ -71,27 +71,78 @@
       </div>
     </div>
 
-    <!-- 统计 -->
-    <div class="hero-stats-wrap">
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-num" data-target="4" data-suffix="段">0</div>
-          <div class="stat-label">AI 产品经历</div>
+    <!-- 重点项目经验 -->
+    <div class="hero-projects-wrap">
+      <div class="hero-projects">
+        <div class="hero-project-item">
+          <div class="hero-project-icon">🛒</div>
+          <div>
+            <strong>电商智能客服</strong>
+            <span>售前咨询 · RAG 知识库 · 故障诊断</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num" data-target="93" data-suffix=".2%">0</div>
-          <div class="stat-label">VLM 综合准确率</div>
+        <div class="hero-project-item">
+          <div class="hero-project-icon">🛡️</div>
+          <div>
+            <strong>内容风控审核</strong>
+            <span>多语种广告 · 规则策略 · 人工复核</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num" data-target="500" data-suffix="万+">0</div>
-          <div class="stat-label">淘宝导流 GMV</div>
+        <div class="hero-project-item">
+          <div class="hero-project-icon">👁️</div>
+          <div>
+            <strong>VLM 多模态识别赋能</strong>
+            <span>万物识别 · 场景拓展 · 电商闭环</span>
+          </div>
         </div>
-        <div class="stat-divider"></div>
-        <div class="stat-item">
-          <div class="stat-num" data-target="28" data-suffix=".75%">0</div>
-          <div class="stat-label">平均审核时长缩短</div>
+        <div class="hero-project-item">
+          <div class="hero-project-icon">🎙️</div>
+          <div>
+            <strong>语音 ASR / TTS 数据清洗</strong>
+            <span>语料标注 · 意图体系 · 质量评测</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 核心技能 -->
+  <section class="skills section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">核心能力</div>
+        <h2 class="section-title">AI 产品经理<span class="highlight">能力图谱</span></h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card" data-delay="0">
+          <div class="skill-icon">🤖</div>
+          <h3>AI Agent 产品落地</h3>
+          <p>覆盖需求拆解、流程设计、Prompt 策略、效果评估到上线迭代的完整闭环</p>
+        </div>
+        <div class="skill-card" data-delay="100">
+          <div class="skill-icon">⚡</div>
+          <h3>Vibe Coding / AI 辅助原型</h3>
+          <p>快速搭建产品 Demo、交互原型、Prompt 调试页及 Agent 工作流 Mock</p>
+        </div>
+        <div class="skill-card" data-delay="200">
+          <div class="skill-icon">📊</div>
+          <h3>RAG 与模型评测</h3>
+          <p>知识库搭建、Badcase 分析、检索命中评估、幻觉率控制与人工纠偏</p>
+        </div>
+        <div class="skill-card" data-delay="300">
+          <div class="skill-icon">🧩</div>
+          <h3>多 Agent 协作设计</h3>
+          <p>覆盖智能客服、内容风控、任务分发、上下文传递、工具调用与异常兜底</p>
+        </div>
+        <div class="skill-card" data-delay="400">
+          <div class="skill-icon">🎯</div>
+          <h3>跨团队产品推进</h3>
+          <p>协调算法、研发、设计、运营、客服等团队推动 AI 功能落地</p>
+        </div>
+        <div class="skill-card" data-delay="500">
+          <div class="skill-icon">🧠</div>
+          <h3>用户体验心理学</h3>
+          <p>结合心理学与新媒体背景，从用户行为、体验心理与业务指标中提炼产品机会</p>
         </div>
       </div>
     </div>
@@ -412,99 +463,49 @@
         <div class="featured-project-copy">
           <div class="featured-project-kicker"><span></span> FEATURED PROJECT · AI AGENT</div>
           <h3>知识口播生产智能体</h3>
-          <p class="featured-project-lead">面向知识类内容创作者的一站式生产工作台：用户只需输入一句内容需求，智能体即可逐步完成需求补全、选题生成、口播脚本、人物与声音配置、真实素材剪辑预览、数字人片段验收与最终合成。</p>
+          <p class="featured-project-lead">面向知识类内容创作者的一站式 AI 视频生产工作台：用户只需描述内容目标并确认选题，系统即可自动完成脚本、配音、逐句字幕、素材匹配、数字人关键片段与最终成片。</p>
 
           <div class="featured-project-points">
-            <div><strong>01</strong><span>自动补全平台、受众、时长与内容角度，生成可执行选题</span></div>
-            <div><strong>02</strong><span>支持脚本编辑、音色与语速配置、自有素材及产品演示网址输入</span></div>
-            <div><strong>03</strong><span>通过剪辑预览、付费生成锁定和逐段验收，控制数字人生成成本与质量</span></div>
+            <div><strong>01</strong><span>将复杂的视频生产流程压缩为“说需求—选角度—拿成片”三步</span></div>
+            <div><strong>02</strong><span>支持发布平台、时长、数字人、人物图、真人录音与自动配音配置</span></div>
+            <div><strong>03</strong><span>自动核验来源、匹配网页录屏与 B-roll，并完成字幕、动效和终稿合成</span></div>
           </div>
 
           <div class="featured-project-tags">
             <span>Vibe Coding</span>
             <span>AI Agent 工作流</span>
-            <span>多模态视频</span>
+            <span>AI 视频 Agent</span>
             <span>数字人生成</span>
             <span>人机协同</span>
           </div>
 
-          <a class="featured-project-link" href="https://lesson-mime-separately-presentations.trycloudflare.com" target="_blank" rel="noopener noreferrer">
-            在线体验作品 <span>↗</span>
+          <a class="featured-project-link" href="http://115.159.216.35/" target="_blank" rel="noopener noreferrer">
+            进入产品体验 <span>↗</span>
           </a>
         </div>
 
-        <div class="featured-project-visual" aria-label="知识口播生产智能体工作台流程示意">
-          <div class="workbench-topbar">
-            <div><i></i><strong>知识口播生产智能体</strong></div>
-            <span>等待输入</span>
-          </div>
-          <div class="workbench-body">
-            <div class="workbench-steps">
-              <span class="active"><b>01</b>需求理解</span>
-              <span><b>02</b>选题方案</span>
-              <span><b>03</b>口播脚本</span>
-              <span><b>04</b>人物与声音</span>
-              <span><b>05</b>剪辑预览</span>
-              <span><b>06</b>数字人生成</span>
-              <span><b>07</b>最终结果</span>
+        <div class="featured-project-visual" aria-label="知识口播生产智能体真实产品界面">
+          <div class="product-showcase-badge"><i></i> LIVE PRODUCT</div>
+
+          <figure class="product-screen product-screen-primary">
+            <div class="product-screen-frame">
+              <img src="images/knowledge-agent-requirement.png" alt="知识口播生产智能体需求输入与平台配置界面" loading="lazy" />
             </div>
-            <div class="workbench-canvas">
-              <div class="workbench-heading">
-                <span>01</span>
-                <div><strong>输入这条视频要解决的问题</strong><small>一句话即可，系统会补全关键需求</small></div>
-              </div>
-              <div class="workbench-input">面向 AI 产品经理，生成一条 60 秒知识口播……</div>
-              <div class="workbench-options">
-                <span class="selected">B站</span><span>抖音</span><span>视频号</span><span>16:9 横屏</span><span>60 秒</span>
-              </div>
-              <div class="workbench-command">分析需求并生成选题 <span>→</span></div>
-              <div class="workbench-progress"><i></i><span>完整工作流 · 7 个生产阶段</span></div>
+            <figcaption><b>01</b> 一句话说明需求</figcaption>
+          </figure>
+
+          <figure class="product-screen product-screen-secondary">
+            <div class="product-screen-frame">
+              <img src="images/knowledge-agent-voice.png" alt="知识口播生产智能体真人录音与自动配音配置界面" loading="lazy" />
             </div>
+            <figcaption><b>02</b> 配置人物与声音</figcaption>
+          </figure>
+
+          <div class="product-showcase-flow">
+            <span>说需求</span><i>→</i><span>选角度</span><i>→</i><span>拿成片</span>
           </div>
         </div>
       </article>
-    </div>
-  </section>
-
-  <!-- 核心技能 -->
-  <section class="skills section" id="skills">
-    <div class="container">
-      <div class="section-header">
-        <div class="section-tag">核心能力</div>
-        <h2 class="section-title">AI 产品经理<span class="highlight">能力图谱</span></h2>
-      </div>
-      <div class="skills-grid">
-        <div class="skill-card" data-delay="0">
-          <div class="skill-icon">🤖</div>
-          <h3>AI Agent 产品落地</h3>
-          <p>覆盖需求拆解、流程设计、Prompt 策略、效果评估到上线迭代的完整闭环</p>
-        </div>
-        <div class="skill-card" data-delay="100">
-          <div class="skill-icon">⚡</div>
-          <h3>Vibe Coding / AI 辅助原型</h3>
-          <p>快速搭建产品 Demo、交互原型、Prompt 调试页及 Agent 工作流 Mock</p>
-        </div>
-        <div class="skill-card" data-delay="200">
-          <div class="skill-icon">📊</div>
-          <h3>RAG 与模型评测</h3>
-          <p>知识库搭建、Badcase 分析、检索命中评估、幻觉率控制与人工纠偏</p>
-        </div>
-        <div class="skill-card" data-delay="300">
-          <div class="skill-icon">🧩</div>
-          <h3>多 Agent 协作设计</h3>
-          <p>覆盖智能客服、内容风控、任务分发、上下文传递、工具调用与异常兜底</p>
-        </div>
-        <div class="skill-card" data-delay="400">
-          <div class="skill-icon">🎯</div>
-          <h3>跨团队产品推进</h3>
-          <p>协调算法、研发、设计、运营、客服等团队推动 AI 功能落地</p>
-        </div>
-        <div class="skill-card" data-delay="500">
-          <div class="skill-icon">🧠</div>
-          <h3>用户体验心理学</h3>
-          <p>结合心理学与新媒体背景，从用户行为、体验心理与业务指标中提炼产品机会</p>
-        </div>
-      </div>
     </div>
   </section>
 
@@ -615,13 +616,13 @@
       <div class="footer-inner">
         <div class="footer-brand">
           <a href="#" class="nav-logo">陶橙蕙<span class="dot">.</span></a>
-          <p>AI 产品经理 · 四段 AI 产品经历<br />香港教育大学心理学硕士在读</p>
+          <p>AI 产品经理 · 智能体 / 多模态 / 语音产品经验<br />香港教育大学心理学硕士在读</p>
         </div>
         <div class="footer-nav">
+          <a href="#skills">核心能力</a>
           <a href="#about">关于我</a>
           <a href="#experience">工作经历</a>
           <a href="#portfolio">重点作品</a>
-          <a href="#skills">核心技能</a>
           <a href="#gallery">相册</a>
           <a href="#contact">联系</a>
         </div>
