@@ -50,7 +50,7 @@ io(document.querySelectorAll('.fade-in'), el => el.classList.add('visible'));
 // ===== 联系表单 =====
 const toast = document.createElement('div');
 toast.className = 'toast';
-toast.textContent = '✅ 消息已发送，我会尽快回复！';
+toast.textContent = '✅ 已收到您的联系信息，我会尽快回复！';
 document.body.appendChild(toast);
 
 const form = document.getElementById('contactForm');
@@ -61,7 +61,7 @@ if (form) {
     btn.textContent = '发送中...';
     btn.disabled = true;
     setTimeout(() => {
-      btn.textContent = '发送消息 ✉️';
+      btn.textContent = '发送联系信息 ✉️';
       btn.disabled = false;
       form.reset();
       toast.classList.add('show');
